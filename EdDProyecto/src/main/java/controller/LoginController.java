@@ -57,7 +57,7 @@ public class LoginController {
 		currStage = mainStage;
 		mainStage.setTitle("Inicio");
 		lblErrorMsg.setVisible(false);
-		userList = new ArrayList<User>();
+
 		btnLogin.requestFocus();
 		
 		
@@ -68,7 +68,7 @@ public class LoginController {
 		
 
 		if (resetApp)
-			exportDefault(); 
+			exportDefault();
 
 		
 		
@@ -90,7 +90,7 @@ public class LoginController {
 	@FXML
 	public void btnPress(ActionEvent e) {
 		Button btn = (Button) e.getSource();
-		if (btn == btnLogin) 
+		if (btn == btnLogin)
 			loginProcess();
 		else if (btn == btnShowHide) {
 			showHideProcess();
@@ -99,7 +99,6 @@ public class LoginController {
 	
 	
 	private void loginProcess() {
-		
 
 		String myUsername = tfUsername.getText();
 		
