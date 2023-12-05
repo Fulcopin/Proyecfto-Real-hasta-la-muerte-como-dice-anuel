@@ -3,7 +3,7 @@ package ec.edu.espol.eddproyecto.clases;
 import java.io.Serializable;
 
 @SuppressWarnings("serial")
-public class User implements Serializable {
+public class User implements Serializable, Comparable<User> {
 
 	private int id;
 	private String username;
@@ -73,9 +73,10 @@ public class User implements Serializable {
 		return username + ";" + password + ";id:" + id;
 	}
 
-	
-	
-
-	
+        
+        @Override
+        public int compareTo(User otherUser) {
+            return Integer.compare(this.id, otherUser.id);
+        }
 	
 }

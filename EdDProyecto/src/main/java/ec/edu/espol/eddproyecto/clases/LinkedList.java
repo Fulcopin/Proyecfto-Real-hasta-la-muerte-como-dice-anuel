@@ -502,5 +502,17 @@ public boolean remove(Object o) {
         return listAll; 
     }
     
+    public class ListaUser extends LinkedList<User> {
+
+        public User findUserByComparableAndId(Comparable<User> cmp, int userId) {
+            for (User user : this) {
+                if (user.getId() == userId && cmp.compareTo(user) == 0) {
+                    return user;
+                }
+            }
+            return null;
+        }
+    }
+
 }
 
