@@ -1,0 +1,34 @@
+VBox {
+    -fx-spacing: 10;
+    -fx-padding: 10;
+}
+
+/* Estilos para el TextField */
+#searchTextField {
+    -fx-pref-width: 150;
+    -fx-pref-height: 30;
+}
+
+/* Estilos para el ComboBox */
+#orderByComboBox {
+    -fx-pref-width: 150;
+    -fx-pref-height: 30;
+}
+
+/* Estilos para la TableView */
+#tableView {
+    -fx-pref-width: 580;
+    -fx-pref-height: 200;
+    -fx-padding: 10;
+}
+
+/* Estilos para las columnas de la TableView */
+.table-column {
+    -fx-alignment: CENTER;
+    -fx-font-weight: bold;
+}
+
+/* Estilos para los elementos HBox */
+HBox {
+    -fx-spacing: 10;
+}

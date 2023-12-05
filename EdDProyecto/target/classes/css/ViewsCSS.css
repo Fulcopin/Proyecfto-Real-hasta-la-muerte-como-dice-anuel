@@ -1,0 +1,56 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 1 dic 2023, 21:54:27
+    Author     : fulco
+*/
+/* Aplicar estilos al AnchorPane principal */
+.anchor-pane {
+    -fx-background-color: #f0f0f0; /* Color de fondo */
+}
+
+/* Aplicar estilos al VBox principal */
+.vbox {
+    -fx-spacing: 10; /* Espaciado entre hijos */
+    -fx-padding: 20; /* Relleno interno */
+}
+
+/* Aplicar estilos a las secciones de HBox */
+.hbox {
+    -fx-spacing: 10; /* Espaciado entre hijos */
+    -fx-alignment: center-left; /* Alineación del contenido a la izquierda */
+}
+
+/* Aplicar estilos a las etiquetas Label */
+.label {
+    -fx-font-weight: bold; /* Texto en negrita */
+}
+
+/* Aplicar estilos a los campos de texto TextField */
+.text-field {
+    -fx-pref-width: 200; /* Ancho preferido */
+}
+
+/* Aplicar estilos al botón "Cargar Imagen" */
+.button {
+    -fx-background-color: #4CAF50; /* Color de fondo */
+    -fx-text-fill: white; /* Color del texto */
+    -fx-pref-width: 150; /* Ancho preferido */
+}
+
+/* Aplicar estilos a los botones de manipulación de imagen */
+.image-buttons .button {
+    -fx-background-color: #2196F3; /* Color de fondo */
+    -fx-text-fill: white; /* Color del texto */
+    -fx-pref-width: 100; /* Ancho preferido */
+}
+
+/* Aplicar estilos al ImageView de la imagen del contacto */
+.image-view {
+    -fx-fit-width: 300; /* Ancho ajustado */
+    -fx-fit-height: 300; /* Altura ajustada */
+}
+
+

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ContactListController">
+
+    <HBox alignment="TOP_LEFT" spacing="10" prefHeight="200.0" prefWidth="800.0">
+        <TableView fx:id="tableView" prefHeight="200.0" prefWidth="580.0">
+            <columns>
+                <TableColumn fx:id="nombreColumn" text="Nombre" />
+                <TableColumn fx:id="numeroColumn" text="Número de contacto" />
+                <TableColumn fx:id="emailColumn" text="Correo electrónico" />
+            </columns>
+        </TableView>
+        <VBox spacing="5">
+            <TextField fx:id="searchTextField" promptText="Buscar..." />
+            <ComboBox fx:id="orderByComboBox" prefWidth="150.0" />
+        </VBox>
+    </HBox>
+</AnchorPane>

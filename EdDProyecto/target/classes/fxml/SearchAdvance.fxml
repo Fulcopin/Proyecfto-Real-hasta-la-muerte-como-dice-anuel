@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.DatePicker?>
+
+<AnchorPane prefHeight="661.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SearchAdvanceController">
+    <children>
+        <VBox layoutX="20.0" layoutY="20.0" spacing="10.0">
+            <HBox spacing="10.0">
+                <Label text="Nombre:" />
+                <TextField fx:id="nombreField" />
+            </HBox>
+            <HBox spacing="10.0">
+                <Label text="Tipo:" />
+                <TextField fx:id="tipoField" />
+            </HBox>
+            <HBox spacing="10.0">
+                <Label text="País:" />
+                <TextField fx:id="countryField" />
+            </HBox>
+         <Label text="Numero Contacto" />
+         <TextField fx:id="nombreField1" />
+         <Label text="Email" />
+         <TextField fx:id="tipoField1" />
+         <Label text="Adrees" />
+         <TextField fx:id="countryField1" />
+         <Label text="Cumpleaños" />
+         <DatePicker fx:id="birthDatePicker"/>
+         <Label text="Apellido" />
+         <TextField fx:id="tipoField2" />
+         <Label text="Numero Trabajo" />
+         <TextField fx:id="countryField2" />
+         <Label text="Correo Trabajo" />
+         <TextField fx:id="tipoField21" />
+         <Label text="Direccion Trbajo" />
+         <TextField fx:id="countryField21" />
+        </VBox>
+        <ListView fx:id="resultListView" layoutX="246.0" layoutY="20.0" prefHeight="360.0" prefWidth="334.0" />
+         <!-- Agregar más criterios según sea necesario -->
+         <Button fx:id="search" layoutX="20.0" layoutY="622.0" text="Buscar" />
+    </children>
+</AnchorPane>
