@@ -53,7 +53,6 @@ public class LoginController {
 	private int totalUsers, currUserCount;
    
 	public void start(Stage mainStage, boolean resetApp) {
-		
 		currStage = mainStage;
 		mainStage.setTitle("Inicio");
 		lblErrorMsg.setVisible(false);
@@ -64,13 +63,6 @@ public class LoginController {
 		
 		tfPassField.setVisible(false);
 		tfPassField.setText(passField.getText());
-		
-		
-
-		if (resetApp)
-			exportDefault();
-
-		
 		
 		
 		
@@ -232,79 +224,13 @@ public class LoginController {
 	}
 	
 	
-	private void exportDefault() {
-		User neel = new User(1, "neel", "patel");
-		User joso = new User(2, "Jose", "Jose");
-		
-		
-		
-		
-		try {
-			FileOutputStream out = new FileOutputStream("usersList.txt");
-			ObjectOutputStream oout = new ObjectOutputStream(out);
-			oout.writeObject(neel);
-			oout.writeObject(joso);
-			oout.close();
-			
-		} catch (Exception e) {
-			e.printStackTrace();  
-		}
-		try {
-			
-			FileWriter fw = new FileWriter("appStats.txt");
-			BufferedWriter bw = new BufferedWriter(fw);
-			
-			
-			totalUsers = 2;
-			currUserCount = 2;
-			
-			
-			
-			String x = totalUsers+"\n";
-			String y = currUserCount+"\n";
-			bw.write(x);
-			bw.write(y);
-
-			bw.close();
-			fw.close();			
-		}
-		catch(Exception e){
-			e.printStackTrace();  
-		}
-		
-	}
 
 	
 
 	
 	public void importUsersList() {
 
-		
-		if (totalUsers > 0) {
-		
-		try {
-			ObjectInputStream ois = new ObjectInputStream(new FileInputStream("usersList.txt"));
-			for (int i = 1; i <= totalUsers; i++) {
-
-				User user = (User) ois.readObject();
-				
-				user.logout = false;
-				userList.add(user);
-			}
-			ois.close();
-			
-			
-		} catch (ClassNotFoundException e) {
-
-			e.printStackTrace();  
-		} catch (FileNotFoundException e) {
-
-			e.printStackTrace();  
-		} catch (IOException e) {
-
-			e.printStackTrace();  
-		}
-		}
+            userList = (ArrayList<User>)ArrayList.deserialize("src/main/resources/user.ser");
 	}
 	
 	

@@ -842,7 +842,6 @@ private void updateContactView(Person editedPerson) {
 	
 	
 	public void exitApplication(ActionEvent event) {
-		
 	    Platform.exit();
 	}
 	public void openContact() {

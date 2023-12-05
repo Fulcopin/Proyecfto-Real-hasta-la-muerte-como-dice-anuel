@@ -1,5 +1,10 @@
 package ec.edu.espol.eddproyecto.clases;
 
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.util.Collection;
 import java.util.Iterator;
@@ -226,5 +231,29 @@ public class ArrayList<E> implements java.util.List<E>, Serializable{
         }
         str += "}";
         return f;
+    }
+    
+        public void serialize(String fileName) {
+        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(fileName))) {
+            oos.writeObject(this);
+            System.out.println("ArrayList serializada correctamente.");
+        } catch (IOException e) {
+            System.out.println("No se pudo serializar la lista");
+        }
+    }
+    
+    public static Object deserialize(String fileName) {
+        ArrayList<Contact> deserializedList = null;
+        try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(fileName))) {
+            deserializedList = (ArrayList) ois.readObject();
+            System.out.println("ArrayList deserializada correctamente.");
+            if (deserializedList == null){
+                deserializedList = new ArrayList<>();
+                return deserializedList;
+            }
+        } catch (IOException | ClassNotFoundException e) {
+            System.out.println("vacio");
+        }
+        return deserializedList;
     }
 }

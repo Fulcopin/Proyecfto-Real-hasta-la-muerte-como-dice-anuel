@@ -82,41 +82,10 @@ public class UserMenuController {
 		}
 	}
 
-	private void logoutProcess() {
-		try {
-			
-			FileWriter fw = new FileWriter("appStats.txt");
-			BufferedWriter bw = new BufferedWriter(fw);
-			
-			String x = totalUsers+"\n";
-			String y = currUserCount+"\n";
-			bw.write(x);
-			bw.write(y);
-
-			bw.close();
-			fw.close();			
-		}
-		catch(Exception e){
-			e.printStackTrace();  
-		}
-		
-		
-		try {
-			File usersFile = new File("usersList.txt");
-			FileOutputStream userOut = new FileOutputStream(usersFile);
-			ObjectOutputStream oout = new ObjectOutputStream(userOut);
-			for (User u : userList) {
-				oout.writeObject(u);
-			}
-			oout.close();
-			
-	
-		} catch (Exception e) {
-			e.printStackTrace();  
-		}
-		
+	private void logoutProcess() {	
 		currUser.logout = true;
 		currStage.close();
+                userList.serialize("src/main/resources/user.ser");
 	}
 
 	private void savePassProcess() {
