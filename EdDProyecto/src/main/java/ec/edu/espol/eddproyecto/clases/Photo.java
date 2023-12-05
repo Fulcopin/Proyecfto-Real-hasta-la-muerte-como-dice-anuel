@@ -5,9 +5,10 @@
 package ec.edu.espol.eddproyecto.clases;
 
 import java.io.File;
+import java.io.Serializable;
 
 
-public class Photo {
+public class Photo implements Serializable{
 
     private String name;
     private File file;

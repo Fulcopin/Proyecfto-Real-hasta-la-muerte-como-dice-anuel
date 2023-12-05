@@ -4,6 +4,7 @@
  */
 package ec.edu.espol.eddproyecto.clases;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.Date;
 
@@ -12,7 +13,7 @@ import java.util.Date;
  *
  * @author JorgeHN
  */
-public class Person extends Contact{
+public class Person extends Contact implements Serializable{
     
     String lastname;
     String workNumber;
